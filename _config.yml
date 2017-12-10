@@ -5,7 +5,7 @@ language:
 
 # aloha has different themes, default one is simple,
 # you could change it with simple, xx
-theme: simple
+theme: aloha
 
 # main menu navigation
 # icon name see http://semantic-ui.com/elements/icon.html
