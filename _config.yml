@@ -1,57 +1,55 @@
-# Site settings
-title: Hanuman
-description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
-cover: assets/images/radhakrishna.jpg
-logo: assets/images/logo.png
-favicon: assets/images/favicon.png
-baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://samanyougarg.com" # the base hostname & protocol for your site
-paginate:	5 # The number of posts to show per page on your homepage
+# html languages
+language:
+- zh-CN
+- en
 
-# Social
-facebook: facebook
-twitter: twitter
-github:  github
+# aloha has different themes, default one is simple,
+# you could change it with simple, xx
+theme: simple
 
-#Additional Pages
-about: about
-contact: contact
-privacy-policy: privacy-policy
+# main menu navigation
+# icon name see http://semantic-ui.com/elements/icon.html
+menu:
+  Home:
+    name: homePage
+    value: /index.html
+    icon: home
+#  Rss:
+#    name: rss
+#    value: /atom.xml
+#    icon: rss
+#  About:
+#    name: aboutPage
+#    value: /about
+#    icon:
 
+# some configuration about index page
+index:
+  showyear: false
 
-permalink: /:title
+# Miscelaneous
+favicon: /favicon.ico
 
+# configure cdn source, in order to access faster
+# default is //cdn.bootcss.com/
+# if you deploy in China, I suggest you use //cdn.bootcss.com/
+# start with // means it could auto to adapt to http or https
+# maybe source url is different between multiple cdn services, ATTENTION please!
+cdn: //cdn.bootcss.com
 
-# Google Analytics
-analytics_id: ""
+# stylesheets loaded in the <head>
+stylesheets:
+- local/css/aloha.css
+#- local/css/semantic-ui/2.2.4/semantic.min.css
+- cdn/semantic-ui/2.2.4/semantic.min.css
+- cdn/magnific-popup.js/1.1.0/magnific-popup.min.css
 
-# Build settings
-markdown: kramdown
-
-kramdown:
-  parse_block_html: true
-
-plugins:
-  - jekyll-paginate
-
-
-# Settings for rake task
-safe: False
-lsi: False
-username: samanyougarg #github username
-repo: hanuman #github repository
-branch: master #branch
-relative_source: ../hanuman/ #source directory
-destination: ../hanuman-pages/ #destination directory
-production_url:  https://samanyougarg.com/
-source_url:  https://github.com/samanyougarg/hanuman #source repository url
-
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
+# scripts loaded in the end of the body
+scripts:
+- cdn/jquery/3.1.0/jquery.min.js
+- cdn/semantic-ui/2.2.4/semantic.min.js
+- cdn/algoliasearch/3.18.1/algoliasearch.min.js
+- cdn/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js
+#- cdn/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js
+- local/js/semantic-ui-algolia.js
+- local/js/aloha-events.js
